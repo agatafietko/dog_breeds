@@ -2,11 +2,33 @@
 
 This project analyzes the "Best in Show - Data About Dogs" dataset from Kaggle to visualize and understand characteristics of different dog breeds.
 
+## Project Overview
+
+This analysis examines various characteristics of dog breeds to provide insights for potential dog owners, breeders, and enthusiasts. The Jupyter notebook includes detailed code, explanations, and visualizations that reveal patterns and relationships in the dataset.
+
 ## Analyses Performed
 
 1. **Top 10 Popular Breeds**: Visualization of the most popular dog breeds based on available data.
 2. **Top 10 Most Expensive Breeds**: Visualization of the most expensive dog breeds.
-3. **Top 10 Dog Score by Breed**: Visualization of breeds with the highest scores according to the dataset.
+3. **Top 10 Most Intelligent Breeds**: Visualization of the breeds with the highest intelligence rankings.
+4. **Lifespan vs. Weight Relationship**: Analysis of how a dog's weight affects its lifespan.
+5. **Breed Characteristics Comparison**: Radar charts comparing various characteristics of the top 5 most popular breeds.
+6. **Price vs. Popularity Analysis**: Examination of whether a breed's price correlates with its popularity.
+
+## Key Visualizations
+
+All visualizations are pre-generated and can be viewed directly in the notebook:
+
+- `top10_popular_breeds.png`: Bar chart of the most popular dog breeds
+- `top10_expensive_breeds.png`: Bar chart of the most expensive dog breeds
+- `top10_intelligence_breeds.png`: Bar chart of the highest-scoring dog breeds for intelligence
+- `weight_vs_lifespan.png`: Scatter plot showing the relationship between dog weight and lifespan
+- `top5_characteristics.png`: Radar charts of characteristics for the top 5 most popular breeds
+- `price_vs_popularity.png`: Scatter plot analyzing the relationship between price and popularity
+
+## Data Source
+
+The data used in this analysis is from the Kaggle dataset ["Best in Show - Data About Dogs"](https://www.kaggle.com/datasets/paultimothymooney/best-in-show-data-about-dogs).
 
 ## Requirements
 
@@ -23,34 +45,21 @@ You can install all requirements using:
 pip install -r requirements.txt
 ```
 
-## Dataset
-
-The dataset is downloaded automatically from Kaggle using the kagglehub library:
-```python
-kagglehub.dataset_download("paultimothymooney/best-in-show-data-about-dogs")
-```
-
 ## Usage
 
-Simply run the Python script:
-```
-python dog_breeds_analysis.py
-```
+You can either:
 
-The script will:
-1. Download the dataset from Kaggle
-2. Process the data
-3. Generate visualizations in the `dog_figures` directory
+1. View the pre-generated analysis in the Jupyter notebook: `dog_breeds_analysis.ipynb`
+2. Run the notebook yourself to regenerate the analysis
 
-## Outputs
+## Key Findings
 
-All visualizations are saved in the `dog_figures` directory:
-- `top10_popular_breeds.png`: Bar chart of the most popular dog breeds
-- `top10_expensive_breeds.png`: Bar chart of the most expensive dog breeds
-- `top10_score_breeds.png`: Bar chart of the highest-scoring dog breeds
+- Labrador Retrievers, German Shepherds, and Golden Retrievers are consistently the most popular breeds
+- French Bulldogs and Cavalier King Charles Spaniels tend to be among the most expensive breeds
+- Smaller dogs generally have longer lifespans than larger breeds
+- Each breed has a unique profile of characteristics that makes it suitable for different lifestyles
+- There doesn't appear to be a strong correlation between a breed's price and its popularity
 
-If a specific column isn't found in the dataset, the script will try to use alternatives or proxies based on the available data.
+## Author
 
-## Note
-
-The script is designed to be adaptive, as the column names in the dataset may vary. It will try to identify the most appropriate columns for the analyses based on keywords in the column names. 
+This analysis was created as part of a data science project exploring popular datasets from Kaggle. 
